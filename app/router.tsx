@@ -1,5 +1,6 @@
 'use client';
 
+import Footer from '@components/footer';
 import Header from '@components/header';
 import ToastMsg from '@components/toastMsg';
 import React from 'react';
@@ -10,8 +11,20 @@ const Router = (props: { children: React.ReactNode }) => {
   return (
     <>
       <CookiesProvider>
-        <Header />
-        {props.children}
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
+            backgroundColor: '#935d8c',
+            paddingBottom: '12rem',
+          }}
+        >
+          <Header />
+          {props.children}
+          <Footer />
+        </div>
         <ToastMsg />
       </CookiesProvider>
     </>

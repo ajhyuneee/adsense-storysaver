@@ -47,17 +47,18 @@ export default function Header() {
   ];
 
   return (
-    <div style={{ display: 'flex', gap: '20px' }}>
-      <Link href={`/${urlSegments[0]}`}>
-        {/* <Link href={`/`}> */}
-        <img
-          src={'/logo.png'}
-          alt="인스타 스토리 뷰 로고"
-          width={161}
-          height={41}
-        />
-      </Link>
-      <ChangeLocale />
-    </div>
+    <s.HeaderBox>
+      <s.LogoBox>
+        <s.LogoImage src={`https://picsum.photos/110${1}`} alt="로고 이미지" />
+      </s.LogoBox>
+      <s.TitleBox>
+        <s.HeaderTitle>StorySaver.net</s.HeaderTitle>
+        <s.HeaderH2>
+          {'Download Instagram Stories, Highlights and Videos'}
+          <br />
+          {'Online Easily with one simple click.'}
+        </s.HeaderH2>
+      </s.TitleBox>
+    </s.HeaderBox>
   );
 }

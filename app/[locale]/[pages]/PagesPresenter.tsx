@@ -15,7 +15,10 @@ const PagesPresenter = (props: props) => {
 
   return (
     <>
-      <s.Container>ㅁㄴㅇ</s.Container>
+      <s.Container>
+        <s.NavBox>nav영역</s.NavBox>
+        <s.ContentBox>콘텐츠영역</s.ContentBox>
+      </s.Container>
     </>
   );
 };
